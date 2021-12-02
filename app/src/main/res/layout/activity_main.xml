@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/uzmobile_back"
+    tools:context=".screen.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_share_black_24dp"
+            android:tint="#070404" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pagerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:piv_count="4"
+        app:piv_selectedColor="@color/colorPrimaryDark"
+        app:piv_unselectedColor="#91BDD1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cardViewBalance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagerIndicator">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:paddingTop="20sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewInternet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_effect"
+                            app:cardElevation="10dp"
+
+                            android:foreground="?attr/actionBarItemBackground"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgInternet"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+
+                                android:scaleType="centerInside"
+                                android:src="@drawable/internet_logo"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Internet"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewTarrif"
+                            android:layout_width="wrap_content"
+                            app:cardElevation="10dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?attr/actionBarItemBackground"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgTariff"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/tarifs_logo"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tariflar"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewMinutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="10dp"
+                            android:foreground="?attr/actionBarItemBackground"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgMinutes"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/minutes_logo"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daqiqalar"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewSMS"
+                            android:layout_width="wrap_content"
+                            app:cardElevation="10dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?attr/actionBarItemBackground"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgSMS"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/sms_logo"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SMS"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewAdven"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="10dp"
+                            android:foreground="?attr/actionBarItemBackground"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgAdven"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/foydali_logo"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Foydali"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardViewServices"
+                            android:layout_width="wrap_content"
+                            app:cardElevation="10dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?attr/actionBarItemBackground"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:id="@+id/imgService"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/xizmat_logo"
+                                android:tint="@color/colorPrimary" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Xizmatlar"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTraffic"
+        android:layout_width="120dp"
+        app:cardElevation="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="8dp"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="TRAFIK"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBalance"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="BALANS"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E6D85B</color>
+    <color name="colorPrimaryDark">#1F36A8</color>
+    <color name="colorPrimaryLight">#FFF</color>
+    <color name="colorAccent">#FFF6DC79</color>
+
+    <color name="c_beeline">#F8D529</color>
+    <color name="c_uzmobile">#076AB5</color>
+    <color name="c_ucell">#68237D</color>
+    <color name="c_ums">#FF0016</color>
+<!--    <color name="c_perfectum">#FF5E11</color>-->
+    <color name="f">#0E0E0E</color>
+</resources>
